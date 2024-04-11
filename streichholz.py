@@ -6,7 +6,7 @@ while True:
     if spielerStreichholz > 6 or spielerStreichholz > mengeStreichholz:
         print("Gib eine kleinere Zahl an (1-6)")
         continue
-    mengeStreichholz = mengeStreichholz - spielerStreichholz
+    mengeStreichholz =- spielerStreichholz
 
     if mengeStreichholz <= 1:
         print("Du hast verloren.")
