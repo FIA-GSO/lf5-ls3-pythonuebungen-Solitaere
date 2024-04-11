@@ -12,21 +12,31 @@ def compute_r2d2_population(steps: int) -> tuple[int,int,int]:
     return (0,0,0)
 
 #---------------------Aufgabe 2 Streichholz------------------------------
-#IMPLEMENT YOUR SOLUTION FOR THE STEICHHOLZSPIEL HERE
-
-
+mengeStreichholz: int = 29;
+print("Der Computer nimmt 2 Streichhölzer. Es sind noch",mengeStreichholz,"übrig")
+while True:
+    spielerStreichholz = int(input("Wie viele Streichhölzer möchtest du nehmen?"))
+    if spielerStreichholz > 6 or spielerStreichholz > mengeStreichholz:
+        print("Gib eine kleinere Zahl an (1-6)")
+        continue
+    mengeStreichholz = mengeStreichholz - spielerStreichholz
+    if mengeStreichholz <= 1:
+        print("Du hast verloren.")
+        break
+    compStreichholz = 7
+    compStreichholz = compStreichholz - spielerStreichholz
+    mengeStreichholz = mengeStreichholz - compStreichholz
+    print("Der Computer nimmt",compStreichholz,"noch",mengeStreichholz,"Streichhölzer sind vorhanden.")
 #---------------------Aufgabe 3 Heron ------------------------------------
 def heron_verfahren(area : float, threshold:float) -> float:
-    """
-        computes the square root using the heron method
-    :param area: size of the area e.g.25
-    :param threshold: threshold for the heron method e.g. 0.01
-    :return:the square root of the given area according to the heron method
-    """
-
-    return 0
-
-
+    laengeA = 25;
+    laengeB = 1;
+    mittelwert = 0;
+    while True:
+        mittelwert = laengeA + laengeB /2
+        laengeA -= mittelwert
+        if laengeA - laengeB < threshold:
+            print("test")
 #---------------------Aufgabe 4 Quersumme------------------------------
 #IMPLEMENT, IF NECESSARY, EXERCISE 4 HERE BUT USE A FUNCTION!
 
