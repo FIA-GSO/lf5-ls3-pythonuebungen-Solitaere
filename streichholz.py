@@ -12,8 +12,8 @@ while True:
         print("Du hast verloren.")
         break
     compStreichholz = 7 
-    compStreichholz = compStreichholz  - spielerStreichholz
-    mengeStreichholz = mengeStreichholz - compStreichholz
+    compStreichholz =- spielerStreichholz
+    mengeStreichholz =- compStreichholz
     print("Der Computer nimmt",compStreichholz,"noch",mengeStreichholz,"Streichhölzer sind vorhanden.")
 
 

@@ -12,7 +12,7 @@ def compute_r2d2_population(steps: int) -> tuple[int,int,int]:
     return (0,0,0)
 
 #---------------------Aufgabe 2 Streichholz------------------------------
-mengeStreichholz: int = 29;
+"""mengeStreichholz: int = 29;
 print("Der Computer nimmt 2 Streichhölzer. Es sind noch",mengeStreichholz,"übrig")
 while True:
     spielerStreichholz = int(input("Wie viele Streichhölzer möchtest du nehmen?"))
@@ -26,17 +26,21 @@ while True:
     compStreichholz = 7
     compStreichholz = compStreichholz - spielerStreichholz
     mengeStreichholz = mengeStreichholz - compStreichholz
-    print("Der Computer nimmt",compStreichholz,"noch",mengeStreichholz,"Streichhölzer sind vorhanden.")
+    print("Der Computer nimmt",compStreichholz,"noch",mengeStreichholz,"Streichhölzer sind vorhanden.")"""
 #---------------------Aufgabe 3 Heron ------------------------------------
 def heron_verfahren(area : float, threshold:float) -> float:
     laengeA = 25;
     laengeB = 1;
     mittelwert = 0;
     while True:
+        
+        print(mittelwert)
+        print(laengeA)
         mittelwert = laengeA + laengeB /2
         laengeA -= mittelwert
         if laengeA - laengeB < threshold:
             print("test")
+            print(input)
 #---------------------Aufgabe 4 Quersumme------------------------------
 #IMPLEMENT, IF NECESSARY, EXERCISE 4 HERE BUT USE A FUNCTION!
 
@@ -48,7 +52,7 @@ if __name__ == '__main__':
     print("You need to adjust this code to run your implementation")
 
     # Aufgabe 1
-    print(f"""
+    #print(f"""
         # R2D2 Population after 5 steps is: 
         # Young: {compute_r2d2_population(5)[0]}
         # Adults: {compute_r2d2_population(5)[1]}
