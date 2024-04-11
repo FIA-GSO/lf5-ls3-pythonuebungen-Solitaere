@@ -12,35 +12,43 @@ def compute_r2d2_population(steps: int) -> tuple[int,int,int]:
     return (0,0,0)
 
 #---------------------Aufgabe 2 Streichholz------------------------------
-"""mengeStreichholz: int = 29;
-print("Der Computer nimmt 2 Streichhölzer. Es sind noch",mengeStreichholz,"übrig")
-while True:
-    spielerStreichholz = int(input("Wie viele Streichhölzer möchtest du nehmen?"))
-    if spielerStreichholz > 6 or spielerStreichholz > mengeStreichholz:
-        print("Gib eine kleinere Zahl an (1-6)")
-        continue
-    mengeStreichholz = mengeStreichholz - spielerStreichholz
-    if mengeStreichholz <= 1:
-        print("Du hast verloren.")
-        break
-    compStreichholz = 7
-    compStreichholz = compStreichholz - spielerStreichholz
-    mengeStreichholz = mengeStreichholz - compStreichholz
-    print("Der Computer nimmt",compStreichholz,"noch",mengeStreichholz,"Streichhölzer sind vorhanden.")"""
-#---------------------Aufgabe 3 Heron ------------------------------------
-def heron_verfahren(area : float, threshold:float) -> float:
-    laengeA = 25;
-    laengeB = 1;
-    mittelwert = 0;
+def streichholz():
+    mengeStreichholz: int  = 29;
+    print("Der Computer nimmt 2 Streichhölzer. Es sind noch",mengeStreichholz,"übrig")
     while True:
         
-        print(mittelwert)
-        print(laengeA)
-        mittelwert = laengeA + laengeB /2
-        laengeA -= mittelwert
-        if laengeA - laengeB < threshold:
-            print("test")
-            print(input)
+        spielerStreichholz = int(input("Wie viele Streichhölzer möchtest du nehmen?"))
+        if spielerStreichholz > 6 or spielerStreichholz > mengeStreichholz:
+            print("Gib eine kleinere Zahl an (1-6)")
+            continue
+        mengeStreichholz =- spielerStreichholz
+
+        if mengeStreichholz <= 1:
+            print("Du hast verloren.")
+            break
+        compStreichholz = 7 
+        compStreichholz =- spielerStreichholz
+        mengeStreichholz =- compStreichholz
+        print("Der Computer nimmt",compStreichholz,"noch",mengeStreichholz,"Streichhölzer sind vorhanden.")
+
+#---------------------Aufgabe 3 Heron ------------------------------------
+def heron_verfahren(area : float, threshold:float) -> float:
+    area = 25;
+    barea = 1;
+    average = 0;
+    difference = 1;
+    threshold = 0.01;
+    loopyLoop = True
+    while(loopyLoop):
+        average = (area + barea) / 2
+        difference = area - barea
+        area = average
+        difference = area - barea
+        if(average - barea < threshold):    
+            print("",area," ",barea," ",average, " " , difference)
+            loopyLoop = False
+        else:
+            print("",area," ",barea," ",average, " " , difference)
 #---------------------Aufgabe 4 Quersumme------------------------------
 #IMPLEMENT, IF NECESSARY, EXERCISE 4 HERE BUT USE A FUNCTION!
 
