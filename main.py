@@ -21,14 +21,14 @@ def streichholz():
         if spielerStreichholz > 6 or spielerStreichholz > mengeStreichholz:
             print("Gib eine kleinere Zahl an (1-6)")
             continue
-        mengeStreichholz =- spielerStreichholz
+        mengeStreichholz = mengeStreichholz - spielerStreichholz
 
         if mengeStreichholz <= 1:
             print("Du hast verloren.")
             break
         compStreichholz = 7 
-        compStreichholz =- spielerStreichholz
-        mengeStreichholz =- compStreichholz
+        compStreichholz = compStreichholz - spielerStreichholz
+        mengeStreichholz = mengeStreichholz - compStreichholz
         print("Der Computer nimmt",compStreichholz,"noch",mengeStreichholz,"Streichhölzer sind vorhanden.")
 
 #---------------------Aufgabe 3 Heron ------------------------------------
